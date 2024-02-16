@@ -20,7 +20,7 @@ import Modal from './Modale';
 // import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi';
 
 export const FirstSection = () => {
-    const [data, setData] = useContext(MyContext)
+    const [data, setData, cart, setCart] = useContext(MyContext)
 
     const getrgory = data.filter((element, index) => {
 
@@ -47,6 +47,13 @@ export const FirstSection = () => {
     )
     console.log(getrgory);
     const navigate = useNavigate()
+
+
+    const add = (element) => {
+        cart.push(element)
+        console.log(cart);
+        console.log('mmm');
+    }
     return (
         <>
             <Carousell />
@@ -130,9 +137,9 @@ export const FirstSection = () => {
                                             </div>
 
                                             <h1 onClick={() => navigate(`/product/${element.name}`)} className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg duration-300'>{element.name}</h1>
-                                            <div className='flex justify-between w-[95%]'>
+                                            <div className='flex justify-between w-[95%] respocqrt'>
                                                 <h1 className='text-gray-600 cursor-pointer'>{element.price}</h1>
-                                                <button className='z-50 border border-orange-500 px-6 py-1 shadow-lg hover:bg-orange-400 duration-500'><Modal /></button>
+                                                <button onClick={() => add(element)} className='z-50 border border-orange-500 px-6 py-1 shadow-lg respocqrt1 hover:bg-orange-400 duration-500'>Add to Cart</button>
                                             </div>
                                         </div>
 
@@ -161,7 +168,7 @@ export const FirstSection = () => {
                                             <h1 onClick={() => navigate(`/product/${element.name}`)} className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg duration-300'>{element.name}</h1>
                                             <div className='flex justify-between w-[95%]'>
                                                 <h1 className='text-gray-600 cursor-pointer'>{element.price}</h1>
-                                                <button className='z-50 border border-orange-500 px-6 py-1 shadow-lg hover:bg-orange-400 duration-500'><Modal /></button>
+                                                <button onClick={() => add(element)} className='z-50 border border-orange-500 px-6 py-1 shadow-lg hover:bg-orange-400 duration-500'>Add to Cart</button>
                                             </div>
                                         </div>
                                     )
@@ -181,7 +188,7 @@ export const FirstSection = () => {
                                                     <div class=" w-72 absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
                                                     <div class=" w-72 absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[40%]">
                                                         <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize shadow shadow-black/60 bg-gray-100 text-white hover:bg-red-500 hover:text-white duration-300"
-                                                        // onClick={() => add(element)}
+                                                        onClick={() => add(element)}
                                                         >ADD TO CART</button>
                                                     </div>
                                                 </div>
@@ -189,7 +196,7 @@ export const FirstSection = () => {
                                             <h1 onClick={() => navigate(`/product/${element.name}`)} className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg duration-300'>{element.name}</h1>
                                             <div className='flex justify-between w-[95%]'>
                                                 <h1 className='text-gray-600 cursor-pointer'>{element.price}</h1>
-                                                <button className='z-50 border border-orange-500 px-6 py-1 shadow-lg hover:bg-orange-400 duration-500'><Modal /></button>
+                                                <button className='z-50 border border-orange-500 px-6 py-1 shadow-lg hover:bg-orange-400 duration-500'>Add to Cart</button>
                                             </div>                                        </div>
                                     )
                                 }

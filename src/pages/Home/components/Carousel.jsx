@@ -11,22 +11,22 @@ export const Carousell = () => {
     return (
         <div className="h-56 sm:h-64 xl:h-80 2xl:h-[60vh] ">
             <Carousel slide={false}>
-                <div className='item1 flex flex-col justify-center items-center gap-5 text-white'>
-                    <p className='text-3xl'>Woemn Collection</p>
-                    <h1 className='text-7xl font-bold'>NEW ARRIVALS</h1>
-                    <button className='border rounded-full bg-white px-8 py-4 text-black font-light'>SHOP NOW</button>
+                <div className='item1 flex flex-col justify-center items-center gap-5 text-white rtesôgar'>
+                    <p className='text-3xl textrespo'>Woemn Collection</p>
+                    <h1 className='text-7xl font-bold textrespo2'>NEW ARRIVALS</h1>
+                    <button className='border rounded-full bg-white px-8 py-4 text-black font-light respbtn'>SHOP NOW</button>
                 </div>
 
-                <div className='item2 flex flex-col justify-center items-center gap-5 text-white'>
-                    <p className='text-3xl'>Woemn Collection</p>
-                    <h1 className='text-7xl font-bold'>NEW ARRIVALS</h1>
-                    <button className='border rounded-full bg-white px-8 py-4 text-black font-light'>SHOP NOW</button>
+                <div className='item2 flex flex-col justify-center items-center gap-5 text-white rtesôgar'>
+                    <p className='text-3xl textrespo'>Woemn Collection</p>
+                    <h1 className='text-7xl font-bold textrespo2'>NEW ARRIVALS</h1>
+                    <button className='border rounded-full bg-white px-8 py-4 text-black font-light respbtn'>SHOP NOW</button>
                 </div>
 
-                <div className='item3 flex flex-col justify-center items-center gap-5 text-white'>
-                    <p className='text-3xl'>Woemn Collection</p>
-                    <h1 className='text-7xl font-bold'>NEW ARRIVALS</h1>
-                    <button className='border rounded-full bg-white px-8 py-4 text-black font-light'>SHOP NOW</button>
+                <div className='item3 flex flex-col justify-center items-center gap-5 text-white rtesôgar'>
+                    <p className='text-3xl textrespo'>Woemn Collection</p>
+                    <h1 className='text-7xl font-bold textrespo2'>NEW ARRIVALS</h1>
+                    <button className='border rounded-full bg-white px-8 py-4 text-black font-light respbtn'>SHOP NOW</button>
                 </div>
                 
             </Carousel>

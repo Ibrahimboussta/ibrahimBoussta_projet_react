@@ -51,10 +51,19 @@ import { useNavigate } from 'react-router-dom';
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import './header.sass'
+import { useState } from 'react';
+import { Offcanvas } from 'bootstrap';
+
 
 export function Header() {
 
     const navigate = useNavigate()
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <Navbar fluid rounded className='border-gray-300 border-b-2 p-5 '>
             <Navbar.Brand href="https://flowbite-react.com">
@@ -62,9 +71,9 @@ export function Header() {
             </Navbar.Brand>
             <div className="flex gap-2 md:order-2">
                 <FaRegUserCircle onClick={() => navigate('/login')} className='text-3xl' />
-                <MdOutlineShoppingBag className='text-3xl' />
+                <MdOutlineShoppingBag onClick={() => navigate('/cart')} className='text-3xl'/>
 
-                <Navbar.Toggle />
+               
             </div>
             <Navbar.Collapse>
                 <Navbar.Link onClick={() => navigate('/')} className='cursor-pointer'>

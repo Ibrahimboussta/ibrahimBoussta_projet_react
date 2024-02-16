@@ -10,6 +10,7 @@ import { Footer } from './layouts/footer';
 import Products, { Productss } from './pages/Products/Products';
 import { Login } from './pages/Login/Login';
 import Signup from './pages/Sign-up/Signup';
+import Cart from './pages/Cart/Cart';
 function App() {
   return (
 
@@ -24,9 +25,10 @@ function App() {
         <Route path='/contact' element={<ContactSec />} />
         <Route path='/login' element={<Login />} />
         <Route path='/sign-up' element={<Signup />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes >
 
-      {/* <Footer/> */}
+      <Footer/>
     </MyProvider>
 
   );

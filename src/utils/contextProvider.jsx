@@ -160,9 +160,11 @@ export const MyProvider = ({ children }) => {
 
     ])
 
+    const [cart, setCart] = useState([])
+
     return (
         <>
-            <MyContext.Provider value={[data, setData]} >
+            <MyContext.Provider value={[data, setData, cart, setCart]} >
                 {children}
             </MyContext.Provider>
         </>
