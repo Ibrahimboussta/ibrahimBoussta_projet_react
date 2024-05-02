@@ -57,52 +57,48 @@ export const FirstSection = () => {
     return (
         <>
             <Carousell />
-
-
-            <div>
-                <div className='flex gap-8 p-20 arrivales' >
-                    <div className='flex flex-col w-[100%] gap-8 '>
-                        <div className='overflow-hidden relative'>
-                            <img className=' hover:scale-110 duration-500' src={banner02} alt="" />
-                            <div className='flex justify-center'>
-                                <button className='absolute bottom-9 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>DRESSES</button>
-                            </div>
-                        </div>
-                        <div className='overflow-hidden relative'>
-                            <img className=' hover:scale-110 duration-500' src={banner05} alt="" />
-                            <div className='flex justify-center'>
-                                <button className='absolute bottom-10 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>SUNGLASSES</button>
-                            </div>
+            <div className='flex flex-col gap-8 md:flex-row md:p-20 arrivales'>
+                <div className='flex flex-col w-full md:w-1/2 gap-8'>
+                    <div className='overflow-hidden relative'>
+                        <img className='hover:scale-110 duration-500' src={banner02} alt="" />
+                        <div className='flex justify-center'>
+                            <button className='absolute bottom-9 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>DRESSES</button>
                         </div>
                     </div>
-
-                    <div className='flex flex-col w-[100%] gap-8 '>
-                        <div className='overflow-hidden relative'>
-                            <img className='hover:scale-110 duration-500' src={banner03} alt="" />
-                            <div className='flex justify-center'>
-                                <button className='absolute bottom-10 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>WATCHES</button>
-                            </div>
-                        </div>
-                        <div className='overflow-hidden relative '>
-                            <img className='hover:scale-110 duration-500' src={banner07} alt="" />
-                            <div className='flex justify-center'>
-                                <button className='absolute bottom-9 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>FOOTERWEAR</button>
-                            </div>
+                    <div className='overflow-hidden relative'>
+                        <img className='hover:scale-110 duration-500' src={banner05} alt="" />
+                        <div className='flex justify-center'>
+                            <button className='absolute bottom-10 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>SUNGLASSES</button>
                         </div>
                     </div>
+                </div>
 
-                    <div className='flex flex-col w-[100%] gap-8 '>
-                        <div className='overflow-hidden relative'>
-                            <img className='hover:scale-110 duration-500' src={banner04} alt="" />
-                            <div className='flex justify-center'>
-                                <button className='absolute bottom-9 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>BAGS</button>
-                            </div>
+                <div className='flex flex-col w-full md:w-1/2 gap-8'>
+                    <div className='overflow-hidden relative'>
+                        <img className='hover:scale-110 duration-500' src={banner03} alt="" />
+                        <div className='flex justify-center'>
+                            <button className='absolute bottom-10 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>WATCHES</button>
                         </div>
-                        <div className='overflow-hidden relative'>
-                            <img className='hover:scale-110 duration-500' src={banner09} alt="" />
-                            <div className='flex justify-center'>
-                                <button className='absolute bottom-10 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>ACCESORIES</button>
-                            </div>
+                    </div>
+                    <div className='overflow-hidden relative'>
+                        <img className='hover:scale-110 duration-500' src={banner07} alt="" />
+                        <div className='flex justify-center'>
+                            <button className='absolute bottom-9 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>FOOTWEAR</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='flex flex-col w-full md:w-1/2 gap-8'>
+                    <div className='overflow-hidden relative'>
+                        <img className='hover:scale-110 duration-500' src={banner04} alt="" />
+                        <div className='flex justify-center'>
+                            <button className='absolute bottom-9 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>BAGS</button>
+                        </div>
+                    </div>
+                    <div className='overflow-hidden relative'>
+                        <img className='hover:scale-110 duration-500' src={banner09} alt="" />
+                        <div className='flex justify-center'>
+                            <button className='absolute bottom-10 bg-white px-20 py-4 opacity-95 text-xl font-light shadow-lg text-black hover:bg-orange-500 duration-500'>ACCESSORIES</button>
                         </div>
                     </div>
                 </div>
@@ -112,106 +108,79 @@ export const FirstSection = () => {
                 <h1 className='text-4xl font-semibold'>FEATURED PRODUCTS</h1>
             </div>
 
-            <div className=' p-20 '>
-
-
-                {/* Hello world */}
-
+            <div className='p-20'>
                 <div className='flex justify-center w-full'>
                     <Tabs aria-label="Tabs with underline" style="underline" className='flex justify-center w-full'>
                         <Tabs.Item active title="SALE">
-                            <div className='flex gap-6 respoPrdct'>
-                                {
-                                    getrgory.map((element, index) =>
-                                        <div className=' flex flex-col gap-2 px-5 py-10 respoMap'>
-                                            <div className=' h-fit w-72 group '>
-                                                <div class="group w-72 relative cursor-pointer items-center justify-center overflow-hidden transition-shadow ">
-                                                    <div class="h-96 w-72">
-                                                        <img class="h-full w-full object-cover transition-transform respoMap duration-500 group-hover:rotate-3 group-hover:scale-125" src={element.img} alt="" />
-                                                    </div>
-                                                    <div class=" w-72 absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-                                                    <div class=" w-72 absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[40%]">
-
-                                                    </div>
+                            <div className='flex flex-wrap justify-center gap-6'>
+                                {getrgory.map((element, index) =>
+                                    <div key={index} className='flex flex-col gap-2 px-5 py-10 w-full md:w-1/2 lg:w-1/3'>
+                                        <div className='h-[300px] w-full group'>
+                                            <div className="group relative h-full w-full cursor-pointer overflow-hidden transition-shadow">
+                                                <img className="h-full w-full object-cover transition-transform duration-500 transform scale-100 group-hover:scale-110" src={element.img} alt="" />
+                                                <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50">
+                                                    <button className="text-white bg-transparent border border-white px-6 py-2 hover:bg-orange-500 hover:border-orange-500 duration-300" onClick={() => navigate(`/product/${element.name}`)}>VIEW DETAILS</button>
                                                 </div>
-                                            </div>
-
-                                            <h1 onClick={() => navigate(`/product/${element.name}`)} className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg duration-300'>{element.name}</h1>
-                                            <div className='flex justify-between w-[95%] respocqrt'>
-                                                <h1 className='text-gray-600 cursor-pointer'>{element.price}</h1>
-                                                <button onClick={() => add(element)} className='z-50 border border-orange-500 px-6 py-1 shadow-lg respocqrt1 hover:bg-orange-400 duration-500'>Add to Cart</button>
                                             </div>
                                         </div>
-
-                                    )
-                                }
+                                        <h1 className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg'>{element.name}</h1>
+                                        <div className='flex justify-between'>
+                                            <h1 className='text-gray-600'>{element.price}</h1>
+                                            <button className='border border-orange-500 px-6 py-1 hover:bg-orange-500 hover:text-white duration-300' onClick={() => add(element)}>Add to Cart</button>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </Tabs.Item>
-                        <Tabs.Item title="NEW" >
-                            <div className='flex gap-6 respoPrdct'>
-                                {
-                                    getrgory1.map((element, index) =>
-                                        <div className=' flex flex-col gap-2 px-5 py-10 respoMap'>
-                                            <div className=' h-fit w-72 group '>
-                                                <div class="group w-72 relative cursor-pointer items-center justify-center overflow-hidden transition-shadow ">
-                                                    <div class="h-96 w-72 ">
-                                                        <img class="h-full w-full object-cover transition-transform duration-500 respoMap group-hover:rotate-3 group-hover:scale-125 " src={element.img} alt="" />
-                                                    </div>
-                                                    <div class=" w-72 absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-                                                    <div class=" w-72 absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[40%]">
-                                                        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize shadow shadow-black/60 bg-gray-100 text-white hover:bg-red-500 hover:text-white duration-300"
-                                                        // onClick={() => add(element)}
-                                                        >ADD TO CART</button>
-                                                    </div>
+                        <Tabs.Item title="NEW">
+                            <div className='flex flex-wrap justify-center gap-6'>
+                                {getrgory1.map((element, index) =>
+                                    <div key={index} className='flex flex-col gap-2 px-5 py-10 w-full md:w-1/2 lg:w-1/3'>
+                                        <div className='h-[300px] w-full group'>
+                                            <div className="group relative h-full w-full cursor-pointer overflow-hidden transition-shadow">
+                                                <img className="h-full w-full object-cover transition-transform duration-500 transform scale-100 group-hover:scale-110" src={element.img} alt="" />
+                                                <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50">
+                                                    <button className="text-white bg-transparent border border-white px-6 py-2 hover:bg-orange-500 hover:border-orange-500 duration-300" onClick={() => navigate(`/product/${element.name}`)}>VIEW DETAILS</button>
                                                 </div>
-                                            </div>
-                                            <h1 onClick={() => navigate(`/product/${element.name}`)} className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg duration-300'>{element.name}</h1>
-                                            <div className='flex justify-between w-[95%]'>
-                                                <h1 className='text-gray-600 cursor-pointer'>{element.price}</h1>
-                                                <button onClick={() => add(element)} className='z-50 border border-orange-500 px-6 py-1 shadow-lg hover:bg-orange-400 duration-500'>Add to Cart</button>
                                             </div>
                                         </div>
-                                    )
-                                }
+                                        <h1 className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg'>{element.name}</h1>
+                                        <div className='flex justify-between'>
+                                            <h1 className='text-gray-600'>{element.price}</h1>
+                                            <button className='border border-orange-500 px-6 py-1 hover:bg-orange-500 hover:text-white duration-300' onClick={() => add(element)}>Add to Cart</button>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </Tabs.Item>
-                        <Tabs.Item title="OLD" >
-                            <div className='flex gap-6 respoPrdct'>
-                                {
-                                    getrgory2.map((element, index) =>
-                                        <div className=' flex flex-col gap-2 px-5 py-10 respoMap'>
-                                            <div className=' h-fit w-72 group '>
-                                                <div class="group w-72 relative cursor-pointer items-center justify-center overflow-hidden transition-shadow ">
-                                                    <div class="h-96 w-72 ">
-                                                        <img class="h-full w-full object-cover transition-transform duration-500 respoMap group-hover:rotate-3 group-hover:scale-125 " src={element.img} alt="" />
-                                                    </div>
-                                                    <div class=" w-72 absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-                                                    <div class=" w-72 absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-[40%]">
-                                                        <button class="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize shadow shadow-black/60 bg-gray-100 text-white hover:bg-red-500 hover:text-white duration-300"
-                                                        onClick={() => add(element)}
-                                                        >ADD TO CART</button>
-                                                    </div>
+                        <Tabs.Item title="OLD">
+                            <div className='flex flex-wrap justify-center gap-6'>
+                                {getrgory2.map((element, index) =>
+                                    <div key={index} className='flex flex-col gap-2 px-5 py-10 w-full md:w-1/2 lg:w-1/3'>
+                                        <div className='h-[300px] w-full group'>
+                                            <div className="group relative h-full w-full cursor-pointer overflow-hidden transition-shadow">
+                                                <img className="h-full w-full object-cover transition-transform duration-500 transform scale-100 group-hover:scale-110" src={element.img} alt="" />
+                                                <div className="absolute inset-0 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50">
+                                                    <button className="text-white bg-transparent border border-white px-6 py-2 hover:bg-orange-500 hover:border-orange-500 duration-300" onClick={() => navigate(`/product/${element.name}`)}>VIEW DETAILS</button>
                                                 </div>
                                             </div>
-                                            <h1 onClick={() => navigate(`/product/${element.name}`)} className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg duration-300'>{element.name}</h1>
-                                            <div className='flex justify-between w-[95%]'>
-                                                <h1 className='text-gray-600 cursor-pointer'>{element.price}</h1>
-                                                <button className='z-50 border border-orange-500 px-6 py-1 shadow-lg hover:bg-orange-400 duration-500'>Add to Cart</button>
-                                            </div>                                        </div>
-                                    )
-                                }
+                                        </div>
+                                        <h1 className='text-gray-600 cursor-pointer hover:text-orange-400 text-lg'>{element.name}</h1>
+                                        <div className='flex justify-between'>
+                                            <h1 className='text-gray-600'>{element.price}</h1>
+                                            <button className='border border-orange-500 px-6 py-1 hover:bg-orange-500 hover:text-white duration-300'>Add to Cart</button>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </Tabs.Item>
                     </Tabs>
                 </div>
-            </div >
-
+            </div>
 
             <section className='p-20 bg-[#F0F0F0]'>
-
-                <div className='flex gap-10 bg-respo'>
+                <div className='flex flex-col md:flex-row gap-10 bg-respo'>
                     <div className='overflow-hidden bgShop shadow-xl'>
-                        {/* <img className='hover:scale-110 duration-500' src={banner08} alt="" /> */}
                         <div className='flex flex-col gap-4 justify-center items-center h-[100%] text-white'>
                             <h1 className='text-4xl '>The Beauty</h1>
                             <h1 className='text-7xl font-semibold respoText'>LOOKBOOK</h1>
@@ -225,17 +194,13 @@ export const FirstSection = () => {
                             <h1 className='text-3xl font-light respoText1'>Boxy2 T-Shirt with Roll Sleeve</h1>
                             <h3 className='text-center font-light text-2xl respoText1'>$20.00</h3>
                         </div>
-
                     </div>
                 </div>
-
             </section>
 
-
             <section className='p-20'>
-
                 <h1 className='text-center text-4xl font-semibold'>OUR BLOG</h1>
-                <div className='flex gap-8 py-10 blog_Respo'>
+                <div className='flex flex-col md:flex-row gap-8 py-10 blog_Respo'>
                     <div className='flex flex-col gap-4'>
                         <img src={blog1} alt="" />
                         <h1 className='text-2xl'>Black Friday Guide: Best Sales & Discount Codes</h1>
@@ -263,7 +228,6 @@ export const FirstSection = () => {
                 <h1 className='text-center text-4xl font-bold rsepoints'>@ FOLLOW US ON INSTAGRAM</h1>
             </div>
             <section className='p-20 respo'>
-
                 <div className='flex justify-around items-center respofree'>
                     <div>
                         <h1 className='font-light text-2xl text-center'>Free Delivery Worldwide</h1>
@@ -281,7 +245,7 @@ export const FirstSection = () => {
                     </div>
                 </div>
             </section>
-
         </>
+
     );
 }

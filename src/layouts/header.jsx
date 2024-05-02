@@ -66,23 +66,22 @@ export function Header() {
 
     return (
         <Navbar fluid rounded className='border-gray-300 border-b-2 p-5 '>
-            <Navbar.Brand href="https://flowbite-react.com">
-                <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
-            </Navbar.Brand>
-            <div className="flex gap-2 md:order-2">
-                <FaRegUserCircle onClick={() => navigate('/login')} className='text-3xl' />
-                <MdOutlineShoppingBag onClick={() => navigate('/cart')} className='text-3xl'/>
-
-               
-            </div>
-            <Navbar.Collapse>
-                <Navbar.Link onClick={() => navigate('/')} className='cursor-pointer'>
-                    Home
-                </Navbar.Link>
-                <Navbar.Link onClick={() => navigate('/about')} className='cursor-pointer'>About</Navbar.Link >
-                <Navbar.Link onClick={() => navigate('/shop')} className='cursor-pointer'>Shop</Navbar.Link>
-                <Navbar.Link onClick={() => navigate('/contact')} className='cursor-pointer' >Contact</Navbar.Link>
-            </Navbar.Collapse>
-        </Navbar>
+        <Navbar.Brand href="https://flowbite-react.com">
+            <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Fashe</span>
+        </Navbar.Brand>
+        <div className="flex gap-2 md:order-2">
+            <FaRegUserCircle onClick={() => navigate('/login')} className='text-3xl' />
+            <MdOutlineShoppingBag onClick={() => navigate('/cart')} className='text-3xl' />
+        </div>
+        <Navbar.Collapse className="md:flex md:gap-5 md:items-center md:justify-end">
+            <Navbar.Link onClick={() => navigate('/')} className='cursor-pointer'>
+                Home
+            </Navbar.Link>
+            <Navbar.Link onClick={() => navigate('/about')} className='cursor-pointer'>About</Navbar.Link>
+            <Navbar.Link onClick={() => navigate('/shop')} className='cursor-pointer'>Shop</Navbar.Link>
+            <Navbar.Link onClick={() => navigate('/contact')} className='cursor-pointer'>Contact</Navbar.Link>
+        </Navbar.Collapse>
+    </Navbar>
+    
     );
 }

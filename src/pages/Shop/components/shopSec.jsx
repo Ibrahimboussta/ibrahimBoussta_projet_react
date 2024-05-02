@@ -104,7 +104,7 @@ export const ShopSec = () => {
     };
 
 
-    
+
 
     const add = (element) => {
         cart.push(element)
@@ -196,7 +196,6 @@ export const ShopSec = () => {
                         />
                     </div>
                 </div>
-
                 <div className='py-20'>
 
 
